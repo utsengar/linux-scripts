@@ -8,3 +8,6 @@ find . -newer before \! -newer after -exec mv {} temp_backup \;
 
 #get the size of the sub-folders in a folder
 du . -h --max-depth=1
+
+#out top 10 largest file/directories is taking up the most space in a /var
+du -a /var | sort -n -r | head -n 10
